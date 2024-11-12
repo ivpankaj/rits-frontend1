@@ -1,17 +1,18 @@
 import { FaRegUserCircle } from "react-icons/fa";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { BsCart3 } from "react-icons/bs";
 import { FaBuildingUser } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import LoginDropdown from "./LoginDropdown";
 
 
 const NavBar = () => {
     return (
         <header className="flex items-center justify-between p-4 bg-white shadow px-8">
-            <div className="flex items-center space-x-4">
+            <Link to={"/"} className="flex items-center space-x-4">
                 {/* Logo */}
                 <img src="/path-to-logo.png" alt="Web Logo" className="h-6" />
                 <span className="text-sm font-semibold text-gray-700">Explore Plus</span>
-            </div>
+            </Link>
 
             {/* Search Bar */}
             <div className="flex-grow mx-4">
@@ -27,19 +28,22 @@ const NavBar = () => {
                 <div className="flex items-center space-x-1">
                     <FaRegUserCircle />
                     <button className="text-gray-700">
-                        Login
+                        <Link to={"/login"}><LoginDropdown /></Link>
                     </button>
-                    <RiArrowDropDownLine />
                 </div>
 
                 <div className="flex items-center space-x-1">
                     <BsCart3 />
-                    <button className="text-gray-700">Cart</button>
+                    <button className="text-gray-700">
+                        <Link to={"/cart"}>
+                            Cart
+                        </Link>
+                    </button>
                 </div>
 
                 <div className="flex items-center space-x-1">
                     <FaBuildingUser />
-                    <button className="text-gray-700">Become a Seller</button>
+                    <Link to={"/be_seller"} className="text-gray-700">Become a Seller</Link>
                 </div>
 
             </div>
