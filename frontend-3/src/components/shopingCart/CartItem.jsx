@@ -66,7 +66,7 @@ export default function CartItem() {
                         onClick={() => setOpen(false)}
                         className="font-medium text-indigo-600 hover:text-indigo-500"
                       >
-                        Continue Shopping
+                        <Link to={"/"}>Continue Shopping</Link>
                         <span aria-hidden="true"> &rarr;</span>
                       </button>
                     </p>

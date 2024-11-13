@@ -1,6 +1,5 @@
 import { FaRegUserCircle } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
-import { FaBuildingUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import LoginDropdown from "./LoginDropdown";
 
@@ -26,26 +25,20 @@ const NavBar = () => {
             {/* Icons Section */}
             <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-1">
-                    <FaRegUserCircle />
+                    <FaRegUserCircle className="text-2xl mr-2"/>
                     <button className="text-gray-700">
                         <Link to={"/login"}><LoginDropdown /></Link>
                     </button>
                 </div>
 
                 <div className="flex items-center space-x-1">
-                    <BsCart3 />
-                    <button className="text-gray-700">
+                    <BsCart3 className="text-2xl mr-2" />
+                    <button className="text-gray-700 text-xl">
                         <Link to={"/cart"}>
                             Cart
                         </Link>
                     </button>
                 </div>
-
-                <div className="flex items-center space-x-1">
-                    <FaBuildingUser />
-                    <Link to={"/be_seller"} className="text-gray-700">Become a Seller</Link>
-                </div>
-
             </div>
         </header>
     )
